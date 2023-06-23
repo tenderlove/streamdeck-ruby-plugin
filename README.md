@@ -6,7 +6,7 @@ The Stream Deck communicates with plugins via Web Sockets.  The [`manifest.json`
 The Stream Deck app will start the executable file, and pass connection information to the executable.
 The executable must connect to the web socket, then let the Stream Deck know it has connected by sending a particular request.
 
-In this example project, we specify [`plugin.rb`](/src/com.example.example-plugin.sdPlugin/manifest.json#4) as the executable.
+In this example project, we specify [`plugin.rb`](/src/com.example.example-plugin.sdPlugin/manifest.json#L4) as the executable.
 You can find the source for the plugin [here](/src/com.example.example-plugin.sdPlugin/plugin.rb).
 
 ## Installation
