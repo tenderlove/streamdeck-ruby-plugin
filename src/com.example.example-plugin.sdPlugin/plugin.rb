@@ -1,4 +1,4 @@
-#!/Users/aaron/.rubies/arm64/ruby-trunk/bin/ruby
+#!/usr/bin/env ruby
 
 require "logger"
 require "async"
