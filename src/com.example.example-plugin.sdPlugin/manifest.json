@@ -1,0 +1,38 @@
+{
+  "SDKVersion": 2,
+  "Author": "Aaron Patterson",
+  "CodePath": "plugin.rb",
+  "Description": "Sample Description",
+  "Name": "Sample Name",
+  "Icon": "actions/template/assets/ruby",
+  "URL": "https://github.com/tenderlove/streamdeck-ruby-plugin",
+  "Version": "1.0.2",
+  "Software": {
+    "MinimumVersion": "5.0"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.11"
+    }
+  ],
+  "Category": "Example Category",
+  "CategoryIcon": "actions/template/assets/ruby",
+  "Actions": [
+    {
+      "Icon": "actions/template/assets/ruby",
+      "Name": "Example Action",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "actions/template/assets/ruby"
+        },
+        {
+          "Image": "actions/template/assets/ruby"
+        }
+      ],
+      "Tooltip": "This is an example tooltip",
+      "UUID": "com.example.example-plugin.action"
+    }
+  ]
+}
