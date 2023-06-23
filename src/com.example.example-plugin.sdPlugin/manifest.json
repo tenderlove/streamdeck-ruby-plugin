@@ -28,7 +28,13 @@
           "Image": "actions/template/assets/ruby"
         },
         {
-          "Image": "actions/template/assets/ruby"
+          "Image": "actions/template/assets/ruby-green"
+        },
+        {
+          "Image": "actions/template/assets/ruby-blue"
+        },
+        {
+          "Image": "actions/template/assets/ruby-purple"
         }
       ],
       "Tooltip": "This is an example tooltip",

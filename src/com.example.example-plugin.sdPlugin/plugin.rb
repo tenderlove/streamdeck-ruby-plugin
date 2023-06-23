@@ -8,6 +8,12 @@ require "json"
 
 log = Logger.new("/tmp/out.txt")
 
+# This class handles different events sent by the stream deck.
+# See this URL for all possible events:
+#   https://developer.elgato.com/documentation/stream-deck/sdk/events-received/
+#
+# I've added a few empty methods, but the handle method just logs events
+# and continues if it doesn't understand them.
 class EventHandler
   def initialize logger, connection
     @logger = logger
@@ -27,18 +33,25 @@ class EventHandler
     @logger.debug "CONNECTED!"
   end
 
-  def willAppear payload
-  end
-
-  def titleParametersDidChange payload
-  end
-
   def keyDown payload
   end
 
   def keyUp payload
+    # Each press changes the state.  The state number maps to the index
+    # in the states array from manifest.json.
+    # When we hit state 3, tell the stream deck to open this URL.
+    #
+    # Check this URL for other commands you can send the stream deck:
+    #
+    #   https://developer.elgato.com/documentation/stream-deck/sdk/events-sent/
+    #
+    if payload["payload"]["state"] == 3
+      send payload["context"], "openUrl", { url: "https://ruby-lang.org" }
+    end
     @logger.debug payload.inspect
   end
+
+  private
 
   def send context, event, payload
     @connection.write(JSON.dump(context: context, event: event, payload: payload))
