@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 require "logger"
+
+# gem install async-websocket
 require "async"
 require "async/http"
 require "async/websocket"
