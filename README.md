@@ -15,3 +15,9 @@ $ ln -s (realpath src/com.example.example-plugin.sdPlugin) ~/Library/Application
 ```
 
 Then restart the Stream Deck app.  The plugin should now be available!
+
+![Screeshot](pics/screenshot.png)
+
+## Development
+
+It seems like you have to restart the Stream Deck app every time you want to restart the script. 🤷‍♀️
