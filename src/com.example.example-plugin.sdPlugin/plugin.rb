@@ -28,11 +28,6 @@ class EventHandler
   end
 
   def willAppear payload
-    if icons?
-      send(payload["context"], "setState", { state: 0 })
-    else
-      send(payload["context"], "setState", { state: 1 })
-    end
   end
 
   def titleParametersDidChange payload
